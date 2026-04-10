@@ -324,3 +324,11 @@ docker compose up --build
 5. **Fine-tuned extraction model** - fine-tune GPT-4o-mini or a smaller model on 500+ labelled logistics documents to improve extraction accuracy and reduce cost.
 
 6. **Evaluation harness** - build a golden dataset of (document, question, answer) triples to continuously measure retrieval precision, answer accuracy, and confidence calibration across model updates.
+
+## Acknowledgements
+
+- **[Claude by Anthropic](https://www.anthropic.com/claude)** (`claude-haiku-4-5-20251001`) — Powers the grounded Q&A engine and cross-encoder reranking. Claude's strong instruction-following is central to the hallucination guardrails in this system.
+- **[OpenAI](https://openai.com)** — `text-embedding-3-small` for document embeddings and `gpt-4o-mini` for structured extraction via JSON mode.
+- **[Qdrant](https://qdrant.tech)** — Vector database powering hybrid dense + sparse search with RRF fusion.
+- **[FastAPI](https://fastapi.tiangolo.com)** — Backend API framework.
+- **[React](https://react.dev)** + **[Vite](https://vitejs.dev)** — Frontend.
