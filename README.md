@@ -108,7 +108,7 @@ confidence = 0.35 x retrieval_similarity
 
 Scores are returned with every `/ask` response alongside individual signal values so reviewers can understand *why* a score is high or low.
 
-Threshold: scores below **0.40** trigger the `guardrail_triggered: true` flag and the answer is replaced with a "not found" message.
+Threshold: scores below **0.25** trigger the `guardrail_triggered: true` flag and the answer is replaced with a "not found" message.
 
 ---
 
