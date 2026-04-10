@@ -6,8 +6,10 @@ A production-grade AI assistant for logistics documents inside a Transportation 
 
 ## Live Demo
 
-> UI: `http://localhost:5173`  
-> API docs: `http://localhost:8000/docs`
+> UI: https://wireless-fiftieth-cozily.ngrok-free.dev
+> API docs: http://localhost:8000/docs
+
+**Note:** The hosted UI is served via [Ngrok](https://ngrok.com) tunneling to a local instance. The app will be live during the review period. If the link is unavailable, follow the **Running Locally** instructions below to run it on your machine.
 
 ---
 
