@@ -330,7 +330,7 @@ docker compose up --build
 
 ## Acknowledgements
 
-- **[Claude by Anthropic](https://www.anthropic.com/claude)** (`claude-haiku-4-5-20251001`) — Powers the grounded Q&A engine and cross-encoder reranking. Claude's strong instruction-following is central to the hallucination guardrails in this system.
+- **[Claude by Anthropic](https://www.anthropic.com/claude)** (`claude-haiku-4-5-20251001` and Sonnet for helping me build the UI) — Powers the grounded Q&A engine and cross-encoder reranking. Claude's strong instruction-following is central to the hallucination guardrails in this system.
 - **[OpenAI](https://openai.com)** — `text-embedding-3-small` for document embeddings and `gpt-4o-mini` for structured extraction via JSON mode.
 - **[Qdrant](https://qdrant.tech)** — Vector database powering hybrid dense + sparse search with RRF fusion.
 - **[FastAPI](https://fastapi.tiangolo.com)** — Backend API framework.
