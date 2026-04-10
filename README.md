@@ -21,7 +21,7 @@ A production-grade AI assistant for logistics documents inside a Transportation 
 │              │ ──────────────────► ├─────────────────────────────────────┤
 │  localhost   │                     │  RAG Engine                         │
 │  :5173       │    POST /extract    │  hybrid retrieve → cross-encoder    │
-│              │ ──────────────────► │  rerank → Claude Sonnet Q&A         │
+│              │ ──────────────────► │  rerank → Claude Haiku Q&A          │
 └──────────────┘                     ├─────────────────────────────────────┤
                                      │  Structured Extractor               │
                                      │  full-doc context → GPT-4o-mini     │
@@ -84,7 +84,7 @@ Three-layer guardrail system:
 
 1. **Pre-answer confidence threshold:** A preliminary confidence score is computed from retrieval similarity and rerank score alone. If this falls below **0.25**, the system returns `"NOT_FOUND"` immediately without calling the answering LLM as it is balanced which can also catch genuine misses and allows answers on short / sparse docs. Saves cost and prevents low-quality responses.
 
-2. **LLM grounding instruction:** Claude Sonnet is instructed via system prompt to answer *only* from provided excerpts, cite which excerpt it used, and return the exact string `"NOT_FOUND: ..."` if the answer isn't in context. Claude's instruction-following makes this highly reliable.
+2. **LLM grounding instruction:** Claude Haiku is instructed via system prompt to answer *only* from provided excerpts, cite which excerpt it used, and return the exact string `"NOT_FOUND: ..."` if the answer isn't in context. Claude's instruction-following makes this highly reliable.
 
 3. **Answer coverage check:** After Claude answers, we measure what fraction of the answer's tokens appear in the retrieved chunks. Low coverage (< 30%) on a non-"NOT_FOUND" answer is a signal of hallucination — this feeds into the final confidence score and can push it below the display threshold.
 
