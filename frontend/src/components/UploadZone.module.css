@@ -1,0 +1,13 @@
+.zone { border: 1.5px dashed var(--border); border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; background: var(--surface); }
+.zone:hover, .zone.dragging { border-color: var(--accent); background: #fdf3ee; }
+.zone.uploading { cursor: default; border-color: var(--ink-3); }
+.zone.done { cursor: default; border-color: var(--green); background: #f0faf5; }
+.zone.error { border-color: var(--red); background: #fdf0ef; }
+.content { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.icon { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: var(--surface-2); border-radius: 50%; color: var(--ink-2); margin-bottom: 0.25rem; }
+.icon.spinning { color: var(--ink-3); animation: spin 1s linear infinite; }
+.icon.success { color: var(--green); background: #e0f5ea; }
+.icon.errIcon { color: var(--red); background: #fde8e6; }
+.title { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
+.sub { font-size: 0.8125rem; color: var(--ink-3); }
+.swap { margin-top: 0.5rem; font-size: 0.8125rem; font-weight: 500; color: var(--accent); background: none; text-decoration: underline; padding: 0; }
